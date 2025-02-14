@@ -11,15 +11,15 @@ st.set_page_config(layout="wide", page_title="E-Commerce Dashboard", page_icon="
 @st.cache_data
 def load_data():
     # Membaca dataset ke dalam DataFrame
-    customers_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/customers_dataset.csv')
-    geolocation_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/geolocation_dataset.csv')
-    order_items_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/order_items_dataset.csv')
-    order_payments_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/order_payments_dataset.csv')
-    order_reviews_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/order_reviews_dataset.csv')
-    orders_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/orders_dataset.csv')
-    product_translation_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/product_category_name_translation.csv')
-    products_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/products_dataset.csv')
-    sellers_df = pd.read_csv('D:/latihan_streamlit/IF1-TUGAS-UAS-KELOMPOK4/E-commerce-public-dataset/sellers_dataset.csv')
+    customers_df = pd.read_csv('https://drive.google.com/file/d/1sN7FBFyj5lEj4tBJjvZfPBZi5VjTaIpQ/view?usp=drive_link')
+    geolocation_df = pd.read_csv('https://drive.google.com/file/d/18j---oxSK599r7Tx9xLoYWGWUQCJQnyR/view?usp=drive_link')
+    order_items_df = pd.read_csv('https://drive.google.com/file/d/1MAR9z7pBP8CIzavdPSkkCZTFlOjm3lDU/view?usp=drive_link')
+    order_payments_df = pd.read_csv('https://drive.google.com/file/d/1nGv82uuLkxVaCXi799qBAje33Ec0p9XR/view?usp=drive_link')
+    order_reviews_df = pd.read_csv('https://drive.google.com/file/d/1nKXkWuT0v3tV-wnHf00nk36etxD8ehiU/view?usp=drive_link')
+    orders_df = pd.read_csv('https://drive.google.com/file/d/1fIJ3Y137NLzuodAEj-7r5YW_sKMhdid8/view?usp=drive_link')
+    product_translation_df = pd.read_csv('https://drive.google.com/file/d/1aUNnS0v3BvO0cJ6popoWx_jvvlphUvqj/view?usp=drive_link')
+    products_df = pd.read_csv('https://drive.google.com/file/d/1OSboio9gy3y7rB4BE4Hae0bRNRHH5hiz/view?usp=drive_link')
+    sellers_df = pd.read_csv('https://drive.google.com/file/d/1zR8pg8J8vsKTnmQT9870okign-LVn-T4/view?usp=drive_link')
     
     # Merge data untuk analisis produk terlaris
     products_df = products_df.merge(product_translation_df, on='product_category_name', how='left')
